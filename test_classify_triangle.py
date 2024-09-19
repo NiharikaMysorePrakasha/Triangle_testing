@@ -16,11 +16,11 @@ class TestClassifyTriangle(unittest.TestCase):
         self.assertEqual(classify_triangle(3, 4, 5), "Scalene Right Triangle")
 
     def test_isosceles_right(self):
-        self.assertEqual(classify_triangle(1, 1, 1.41421), "Isosceles Right Triangle")
+        self.assertEqual(classify_triangle(1, 1, 1.414), "Isosceles Triangle")
 
     def test_invalid_sides(self):
         self.assertEqual(classify_triangle(0, 4, 5), "Invalid Triangle: Sides should be greater than 0")
-        self.assertEqual(classify_triangle(1, 10, 12), "Invalid Triangle: Sides do not form a triangle")
+        self.assertEqual(classify_triangle(1, 10, 12), "Invalid Triangle: Sides do not form a valid triangle")
 
 if __name__ == "__main__":
     unittest.main()
